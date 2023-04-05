@@ -1,0 +1,24 @@
+%!TEX root=../main.tex
+
+\begin{table}
+    \caption{Resultados Experimentais.} \label{tab:results}
+\begin{center}
+    \begin{footnotesize}
+\begin{tabular}{cp{1cm}cccccp{1.2cm}p{1cm}}
+\toprule
+    & \textbf{Função} & \textbf{Acurácia} & \textbf{Precisão} & \textbf{Revocação}& $\mathbf{F_1}$\textbf{-\emph{Score}} & \textbf{Épocas} & \textbf{\emph{Early Stopping}} & \textbf{Tempo ($\mathbf{s})$} \\
+\midrule
+\textbf{LeNet} & ReLU & 73,35\% & 66,87\% & 73,35\% & 68,57\% & 150 & 30 & 1742 \\
+\textbf{LeNet} & Leaky ReLU & 73,50\% & 70,31\% & 73,50\% & 70,51\% & 150 & 25 & 1776 \\
+\midrule
+\textbf{AlexNet} & ReLU & 69,16\% & 57,99\% & 69,16\% & 62,13\% & 100  & 10 & 560 \\
+\textbf{AlexNet} & Leaky ReLU & 62,13\% & 70,70\% & 62,13\% & 63,71\% & 100  & 25 & 2155 \\
+\midrule
+\textcolor{imperialblue}{\textbf{Inception}} & \textcolor{imperialblue}{ReLU} & \textcolor{imperialblue}{78,74\%} & \textcolor{imperialblue}{78,49\%} & \textcolor{imperialblue}{78,74\%} & \textcolor{imperialblue}{75,84\%} & \textcolor{imperialblue}{150} & \textcolor{imperialblue}{20} & \textcolor{imperialblue}{1666} \\
+\midrule
+\textbf{ResNet} & ReLU & 73,20\% & 68,98\% & 73,20\% & 67,85\% & 300 & 20 & 3795 \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{center}
+\end{table}

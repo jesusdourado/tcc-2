@@ -1,0 +1,136 @@
+%!TEX root=../main.tex
+\begin{frame}[shrink=8]{Resultados}
+\begin{table}[h!]
+\caption{Síntese dos resultados experimentais.} \label{tab:resultadosExperimentais}
+\begin{footnotesize}
+\begin{tabular}{cccccccc}
+\toprule
+\textbf{Modelo} & \textbf{Épocas} &\textbf{Precisão} & \textbf{Revocação} & \textbf{F-\emph{Score}} & \textbf{mAP@0.5} & \textbf{Parâmetros} & \textbf{Tempo}\\
+\midrule
+\textbf{YOLOv5 \emph{Medium}} & $300/300$ & $\SI{59,5}{\percent}$ & $\SI{63,1}{\percent}$ & $\SI{61,20}{\percent}$ & $\SI{55,5}{\percent}$ & $\num{20852934}$ & $\SI{9}{\hour}\SI{7}{\minute}$\\
+\textbf{YOLOv5 Medium} & $264/500$ & $\SI{81,7}{\percent}$ & $\SI{78,9}{\percent}$ & $\SI{80,27}{\percent}$ & $\SI{79,9}{\percent}$ & $\num{20852934}$ & $\SI{9}{\hour}\SI{58}{\minute}$\\
+\textbf{YOLOv5 Small} & $173/300$ & $\SI{81,5}{\percent}$ & $\SI{79,7}{\percent}$ & $\SI{80,58}{\percent}$ & $\SI{80,7}{\percent}$ & $\num{7012822}$ & $\SI{7}{\hour}\SI{26}{\minute}$\\
+\textbf{YOLOv5 Small} & $194/500$ & $\SI{81,4}{\percent}$ & $\SI{79,4}{\percent}$ & $\SI{80,38}{\percent}$ & $\SI{80,4}{\percent}$ & $\num{7012822}$ & $\SI{6}{\hour}$\\
+\textbf{YOLOv5 Nano} & $293/300$ & $\SI{79,5}{\percent}$ & $\SI{77,5}{\percent}$ & $\SI{78,48}{\percent}$ & $\SI{78,3}{\percent}$ & $\num{1760518}$ & $\SI{10}{\hour}\SI{19}{\minute}$\\
+\textbf{YOLOv5 Nano} & $340/500$ & $\SI{79,9}{\percent}$ & $\SI{78,2}{\percent}$ & $\SI{79,04}{\percent}$ & $\SI{79,0}{\percent}$ & $\num{1760518}$ & $\SI{12}{\hour}\SI{38}{\minute}$\\
+\midrule
+\textbf{YOLOv7 Large} & $500/500$ & $\SI{80,6}{\percent}$ & $\SI{79,9}{\percent}$ & $\SI{80,24}{\percent}$ & $\SI{81,4}{\percent}$ & $\num{70782444}$ & $\SI{52}{\hour}\SI{5}{\minute}$\\
+\textbf{YOLOv7 Standard} & $500/500$ & $\SI{79,2}{\percent}$ & $\SI{78,8}{\percent}$ & $\SI{78,99}{\percent}$ & $\SI{79,8}{\percent}$ & $\num{36481772}$ & $\SI{26}{\hour}\SI{34}{\minute}$\\
+\textbf{YOLOv7 Tiny} & $500/500$ & $\SI{75,2}{\percent}$ & $\SI{77,9}{\percent}$ & $\SI{76,52}{\percent}$ & $\SI{77,0}{\percent}$ & $\num{6007596}$ & $\SI{23}{\hour}\SI{1}{\minute}$\\
+
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{table}
+\end{frame}
+
+\begin{frame}[shrink=8]{Resultados}
+\begin{table}[h!]
+\caption{Modelo melhor avaliado.} \label{tab:resultadosExperimentais}
+\begin{footnotesize}
+\begin{tabular}{cccccccc}
+\toprule
+\textbf{Modelo} & \textbf{Épocas} &\textbf{Precisão} & \textbf{Revocação} & \textbf{F-\emph{Score}} & \textbf{mAP@0.5} & \textbf{Parâmetros} & \textbf{Tempo}\\
+\midrule
+\textbf{YOLOv5 \emph{Medium}} & $300/300$ & $\SI{59,5}{\percent}$ & $\SI{63,1}{\percent}$ & $\SI{61,20}{\percent}$ & $\SI{55,5}{\percent}$ & $\num{20852934}$ & $\SI{9}{\hour}\SI{7}{\minute}$\\
+\textbf{YOLOv5 Medium} & $264/500$ & $\SI{81,7}{\percent}$ & $\SI{78,9}{\percent}$ & $\SI{80,27}{\percent}$ & $\SI{79,9}{\percent}$ & $\num{20852934}$ & $\SI{9}{\hour}\SI{58}{\minute}$\\
+\textbf{YOLOv5 Small} & $173/300$ & $\SI{81,5}{\percent}$ & $\SI{79,7}{\percent}$ & $\SI{80,58}{\percent}$ & $\SI{80,7}{\percent}$ & $\num{7012822}$ & $\SI{7}{\hour}\SI{26}{\minute}$\\
+\textbf{YOLOv5 Small} & $194/500$ & $\SI{81,4}{\percent}$ & $\SI{79,4}{\percent}$ & $\SI{80,38}{\percent}$ & $\SI{80,4}{\percent}$ & $\num{7012822}$ & $\SI{6}{\hour}$\\
+\textbf{YOLOv5 Nano} & $293/300$ & $\SI{79,5}{\percent}$ & $\SI{77,5}{\percent}$ & $\SI{78,48}{\percent}$ & $\SI{78,3}{\percent}$ & $\num{1760518}$ & $\SI{10}{\hour}\SI{19}{\minute}$\\
+\textbf{YOLOv5 Nano} & $340/500$ & $\SI{79,9}{\percent}$ & $\SI{78,2}{\percent}$ & $\SI{79,04}{\percent}$ & $\SI{79,0}{\percent}$ & $\num{1760518}$ & $\SI{12}{\hour}\SI{38}{\minute}$\\
+\midrule
+\textcolor{blue}{\textbf{YOLOv7 Large}} & \textcolor{blue}{$500/500$} & \textcolor{blue}{$\SI{80,6}{\percent}$} & \textcolor{blue}{$\SI{79,9}{\percent}$} & \textcolor{blue}{$\SI{80,24}{\percent}$} & \textcolor{blue}{$\SI{81,4}{\percent}$} & \textcolor{blue}{$\num{70782444}$} & \textcolor{blue}{$\SI{52}{\hour}\SI{5}{\minute}$}\\
+\textbf{YOLOv7 Standard} & $500/500$ & $\SI{79,2}{\percent}$ & $\SI{78,8}{\percent}$ & $\SI{78,99}{\percent}$ & $\SI{79,8}{\percent}$ & $\num{36481772}$ & $\SI{26}{\hour}\SI{34}{\minute}$\\
+\textbf{YOLOv7 Tiny} & $500/500$ & $\SI{75,2}{\percent}$ & $\SI{77,9}{\percent}$ & $\SI{76,52}{\percent}$ & $\SI{77,0}{\percent}$ & $\num{6007596}$ & $\SI{23}{\hour}\SI{1}{\minute}$\\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{table}
+\end{frame}
+
+\begin{frame}[shrink=8]{Resultados}
+\begin{table}[h!]
+\caption{Modelo com as menores métricas de desempenho.} \label{tab:resultadosExperimentais}
+\begin{footnotesize}
+\begin{tabular}{cccccccc}
+\toprule
+\textbf{Modelo} & \textbf{Épocas} &\textbf{Precisão} & \textbf{Revocação} & \textbf{F-\emph{Score}} & \textbf{mAP@0.5} & \textbf{Parâmetros} & \textbf{Tempo}\\
+\midrule
+\textcolor{blue}{\textbf{YOLOv5 \emph{Medium}}} & \textcolor{blue}{$300/300$} & \textcolor{blue}{$\SI{59,5}{\percent}$} & \textcolor{blue}{$\SI{63,1}{\percent}$} & \textcolor{blue}{$\SI{61,20}{\percent}$} & \textcolor{blue}{$\SI{55,5}{\percent}$} & \textcolor{blue}{$\num{20852934}$} & \textcolor{blue}{$\SI{9}{\hour}\SI{7}{\minute}$}\\
+\textbf{YOLOv5 Medium} & $264/500$ & $\SI{81,7}{\percent}$ & $\SI{78,9}{\percent}$ & $\SI{80,27}{\percent}$ & $\SI{79,9}{\percent}$ & $\num{20852934}$ & $\SI{9}{\hour}\SI{58}{\minute}$\\
+\textbf{YOLOv5 Small} & $173/300$ & $\SI{81,5}{\percent}$ & $\SI{79,7}{\percent}$ & $\SI{80,58}{\percent}$ & $\SI{80,7}{\percent}$ & $\num{7012822}$ & $\SI{7}{\hour}\SI{26}{\minute}$\\
+\textbf{YOLOv5 Small} & $194/500$ & $\SI{81,4}{\percent}$ & $\SI{79,4}{\percent}$ & $\SI{80,38}{\percent}$ & $\SI{80,4}{\percent}$ & $\num{7012822}$ & $\SI{6}{\hour}$\\
+\textbf{YOLOv5 Nano} & $293/300$ & $\SI{79,5}{\percent}$ & $\SI{77,5}{\percent}$ & $\SI{78,48}{\percent}$ & $\SI{78,3}{\percent}$ & $\num{1760518}$ & $\SI{10}{\hour}\SI{19}{\minute}$\\
+\textbf{YOLOv5 Nano} & $340/500$ & $\SI{79,9}{\percent}$ & $\SI{78,2}{\percent}$ & $\SI{79,04}{\percent}$ & $\SI{79,0}{\percent}$ & $\num{1760518}$ & $\SI{12}{\hour}\SI{38}{\minute}$\\
+\midrule
+\textbf{YOLOv7 Large} & $500/500$ & $\SI{80,6}{\percent}$ & $\SI{79,9}{\percent}$ & $\SI{80,24}{\percent}$ & $\SI{81,4}{\percent}$ & $\num{70782444}$ & $\SI{52}{\hour}\SI{5}{\minute}$\\
+\textbf{YOLOv7 Standard} & $500/500$ & $\SI{79,2}{\percent}$ & $\SI{78,8}{\percent}$ & $\SI{78,99}{\percent}$ & $\SI{79,8}{\percent}$ & $\num{36481772}$ & $\SI{26}{\hour}\SI{34}{\minute}$\\
+\textbf{YOLOv7 Tiny} & $500/500$ & $\SI{75,2}{\percent}$ & $\SI{77,9}{\percent}$ & $\SI{76,52}{\percent}$ & $\SI{77,0}{\percent}$ & $\num{6007596}$ & $\SI{23}{\hour}\SI{1}{\minute}$\\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{table}
+\end{frame}
+
+\begin{frame}[shrink=8]{Resultados}
+\begin{table}[h!]
+\caption{Modelo mais leve melhor avaliado.} \label{tab:resultadosExperimentais}
+\begin{footnotesize}
+\begin{tabular}{cccccccc}
+\toprule
+\textbf{Modelo} & \textbf{Épocas} &\textbf{Precisão} & \textbf{Revocação} & \textbf{F-\emph{Score}} & \textbf{mAP@0.5} & \textbf{Parâmetros} & \textbf{Tempo}\\
+\midrule
+\textbf{YOLOv5 \emph{Medium}} & $300/300$ & $\SI{59,5}{\percent}$ & $\SI{63,1}{\percent}$ & $\SI{61,20}{\percent}$ & $\SI{55,5}{\percent}$ & $\num{20852934}$ & $\SI{9}{\hour}\SI{7}{\minute}$\\
+\textbf{YOLOv5 Medium} & $264/500$ & $\SI{81,7}{\percent}$ & $\SI{78,9}{\percent}$ & $\SI{80,27}{\percent}$ & $\SI{79,9}{\percent}$ & $\num{20852934}$ & $\SI{9}{\hour}\SI{58}{\minute}$\\
+\textbf{YOLOv5 Small} & $173/300$ & $\SI{81,5}{\percent}$ & $\SI{79,7}{\percent}$ & $\SI{80,58}{\percent}$ & $\SI{80,7}{\percent}$ & $\num{7012822}$ & $\SI{7}{\hour}\SI{26}{\minute}$\\
+\textbf{YOLOv5 Small} & $194/500$ & $\SI{81,4}{\percent}$ & $\SI{79,4}{\percent}$ & $\SI{80,38}{\percent}$ & $\SI{80,4}{\percent}$ & $\num{7012822}$ & $\SI{6}{\hour}$\\
+\textbf{YOLOv5 Nano} & $293/300$ & $\SI{79,5}{\percent}$ & $\SI{77,5}{\percent}$ & $\SI{78,48}{\percent}$ & $\SI{78,3}{\percent}$ & $\num{1760518}$ & $\SI{10}{\hour}\SI{19}{\minute}$\\
+\textcolor{blue}{\textbf{YOLOv5 Nano}} & \textcolor{blue}{$340/500$} & \textcolor{blue}{$\SI{79,9}{\percent}$} & \textcolor{blue}{$\SI{78,2}{\percent}$} & \textcolor{blue}{$\SI{79,04}{\percent}$} & \textcolor{blue}{$\SI{79,0}{\percent}$} & \textcolor{blue}{$\num{1760518}$} & \textcolor{blue}{$\SI{12}{\hour}\SI{38}{\minute}$}\\
+\midrule
+\textbf{YOLOv7 Large} & $500/500$ & $\SI{80,6}{\percent}$ & $\SI{79,9}{\percent}$ & $\SI{80,24}{\percent}$ & $\SI{81,4}{\percent}$ & $\num{70782444}$ & $\SI{52}{\hour}\SI{5}{\minute}$\\
+\textbf{YOLOv7 Standard} & $500/500$ & $\SI{79,2}{\percent}$ & $\SI{78,8}{\percent}$ & $\SI{78,99}{\percent}$ & $\SI{79,8}{\percent}$ & $\num{36481772}$ & $\SI{26}{\hour}\SI{34}{\minute}$\\
+\textbf{YOLOv7 Tiny} & $500/500$ & $\SI{75,2}{\percent}$ & $\SI{77,9}{\percent}$ & $\SI{76,52}{\percent}$ & $\SI{77,0}{\percent}$ & $\num{6007596}$ & $\SI{23}{\hour}\SI{1}{\minute}$\\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{table}
+\end{frame}
+
+\begin{frame}{Resultados}
+    \begin{figure}[H]
+	\centering
+	\subfloat[Desejado]{ \includegraphics[width=0.35\linewidth]{./img/results/result.jpg}}
+	%\hfill
+	\subfloat[Previsto]{    \includegraphics[width=0.35\linewidth]{./img/results/predicted.jpg}} \\
+	\caption{Resultados desejados e inferidos pelo modelo YOLOv5.} \label{img:yolov5}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[H]
+	\centering
+	%\hfill
+    \includegraphics[width=0.73\linewidth]{./img/results/result5-v7-ideal.jpg} \\
+	\caption{Predição ideal da imagem.} \label{img:yolov7-ideal}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[H]
+	\centering
+	%\hfill
+    \includegraphics[width=0.73\linewidth]{./img/results/result5-v7-detected.jpg} \\
+	\caption{Detecção pelo modelo YOLOv7.} \label{img:yolov7-detected}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[H]
+	\centering
+	%\hfill
+    \includegraphics[width=0.73\linewidth]{./img/results/result5-v7.jpg} \\
+	\caption{Comparação entre o resultado ideal e o detectado do modelo YOLOv7.} \label{img:yolov7}
+\end{figure}
+\end{frame}
+
+

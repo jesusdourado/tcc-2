@@ -1,0 +1,120 @@
+\documentclass[presentation,aspectratio=169]{beamer}
+
+\usecolortheme{Imperial}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{datetime}
+\usepackage{icomma}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage[caption=true,font=footnotesize]{subfig}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker = {,}, group-minimum-digits=3, group-separator={.},binary-units=true}
+
+\definecolor{cinza}{rgb}{0.95, 0.95, 0.95}
+\definecolor{alerta}{RGB}{0,129,208}
+\setbeamercolor{alerted text}{fg=alerta}
+\setbeamercolor*{item}{fg=alerta}
+\setbeamercolor{block body}{fg=black,bg=cinza}
+\setbeamercolor{block title}{bg=alerta!60!white,fg=white}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\setbeamertemplate{footline}[text line]{%
+  \parbox{\linewidth}{\vspace*{-8pt}\textcolor{imperialblue}{Jesus Dourado de Albuquerque (jda.eng17@uea.edu.br)\hfill\insertpagenumber/\inserttotalframenumber}}}
+
+% -----------------------------------------------------------------------------
+\AtBeginSubsection[]
+{
+  \begin{frame}[plain]{Outline}
+   \tableofcontents[
+    sectionstyle=show/shaded,
+    subsectionstyle=show/shaded,
+    ]
+  \end{frame}
+}
+
+\AtBeginSection[]
+{
+  \begin{frame}[plain]{Agenda}
+   \tableofcontents[
+    sectionstyle=show/shaded,
+    subsectionstyle=show/shaded,
+    ]
+  \end{frame}
+}
+
+%Information to be included in the title page:
+\title{\LARGE{Uma aplicação de Redes Neurais Convolucionais Regionais para Detecção de Malária}
+}
+
+\author{\textbf{Jesus Dourado de Albuquerque}\\
+\textbf{Orientadora}:  Prof. Dra. Elloá Barreto Guedes da Costa\\
+\footnotesize{\emph{\{jda.eng17, ebgcosta\}@uea.edu.br}}\\
+\small{\emph{\textcolor{imperialblue}{Trabalho de Conclusão de Curso 2022}}}
+}
+
+\institute{\small{Laboratório de Sistemas Inteligentes\\
+Escola Superior de Tecnologia\\
+Universidade do Estado do Amazonas}
+}
+
+\date{}
+
+\begin{document}
+
+{
+\setbeamertemplate{footline}{}
+\frame{\titlepage}
+}
+
+\institute{}
+
+
+\section{Introdução}
+\input{./files/intro}
+
+%\section{Trabalhos Relacionados}
+%\input{./files/relacionados}
+
+\section{Fundamentação Teórica}
+\input{./files/fundamentacao}
+
+\section{Metodologia}
+\input{./files/metodologia}
+
+\section{Resultados}
+\input{./files/resultados}
+
+%\section{Estudo de Caso em Pavimentações no Brasil}
+%\input{./files/sugestoes}
+
+\section{Considerações Finais}
+\input{./files/considera}
+
+\begin{frame}[allowframebreaks] {Referências}
+\bibliographystyle{sbc}
+\bibliography{ref}
+\end{frame}
+
+
+\institute{\small{Laboratório de Sistemas Inteligentes\\
+Escola Superior de Tecnologia\\
+Universidade do Estado do Amazonas}
+}
+
+{
+\setbeamertemplate{footline}{}
+\frame{\titlepage}
+}
+
+\end{document}

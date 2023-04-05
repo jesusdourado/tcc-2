@@ -1,0 +1,111 @@
+%!TEX root=../main.tex
+\begin{frame}{Estudo de Caso: Pavimentações no Brasil}
+    \begin{block}{Questão Motriz}
+    Como o melhor modelo identificado se comporta em um cenário brasileiro?
+    \end{block}
+    \pause
+    \begin{itemize}
+    \item \emph{Road Traversing Knowledge} -- \alert{RTK \emph{dataset}} \cite{Rateke2019}
+    \item Anotado originalmente para segmentação
+    \item Imagens com dimensões $352 \times 288$ \emph{pixels}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Estudo de Caso: RTK \emph{dataset}}
+   \begin{table}[h!]
+\begin{center}
+\caption{Descrição estatística do pré-processamento do RTK \emph{dataset}.} \label{tab:boundingboxes}
+\begin{footnotesize}
+\begin{tabular}{cccccccccc}
+\toprule
+        & \multicolumn{3}{c}{\textbf{Comprimento}} & & \multicolumn{3}{c}{\textbf{Largura}} & & \textbf{Exemplos} \\
+        \cmidrule{2-4} \cmidrule{6-8} \cmidrule{10-10}
+      &  \textbf{Média} & \textbf{Máx} & \textbf{Mín} & &    \textbf{Média} & \textbf{Máx} & \textbf{Mín} & & \textbf{Quantidade}\\
+\midrule
+\textbf{Classe D00} & $43.27 \pm 26.06$ & 98 & 6 & & $33.61 \pm 21.17$ & 87 & 3 & & 36\\
+\textbf{Classe D10} & $18.76 \pm 21.00$ & 107 & 2 & & $42.24 \pm 47.70$ & 345 & 5 & & 390\\
+\textbf{Classe D40} & $13.92 \pm 10.11$ & 62 & 3 & & $34.52 \pm 17.38$ & 93 & 4 & & 105\\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{center}
+\end{table}
+\end{frame}
+
+
+\begin{frame}{Estudo de Caso: Exemplos}
+    \begin{figure}[h!]
+    	\centering
+    	\hfill {\includegraphics[width=0.32\linewidth]{./img/cracks_1.jpg}}
+    	\subfloat{\includegraphics[width=0.32\linewidth]{./img/cracks_2.jpg}}
+    	\subfloat{\includegraphics[width=0.32\linewidth]{./img/pothole_6.jpg}}
+    	\caption{Exemplos do RTK \emph{dataset} com rótulos de classes mapeados.} \label{img:rtk}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Estudo de Caso: Metodologia}
+\begin{itemize}
+    \item Transferência de aprendizado utilizando a arquitetura YOLOv5 com a Configuração 4
+    \item Validação cruzada \emph{holdout}
+    \begin{itemize}
+    \item Treinamento: $70\%$
+    \item Validação: $10\%$
+    \item Teste: $20\%$
+\end{itemize}
+\ \ \newline
+\item Regularização com o uso de \alert{\emph{early stopping}}
+\item \alert{Métricas}: Precisão, Revocação, $F_1$-\emph{Score} e mAP
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Estudo de Caso: Resultados}
+\begin{table}[h!]
+\begin{center}
+\caption{Desempenho da rede na previsão de falhas em pavimentações asfálticas no Brasil.} \label{tab:yoloBrasil}
+\begin{tabular}{ccccc}
+	\toprule
+	  & \textbf{Precisão} & \textbf{Revocação} & $\mathbf{F_1}$\textbf{-Score} & \textbf{mAP}$\mathbf{@0.5}$\\
+	\midrule
+\textbf{Todas as Classes} & \SI{43,8}{\percent} & \SI{51,0}{\percent} & \SI{47,1}{\percent} & \SI{45,6}{\percent}\\
+\textbf{Classe D00} & \SI{18,7}{\percent} & \SI{23,4}{\percent} & \SI{20,8}{\percent} & \SI{11,5}{\percent}\\
+\textbf{Classe D10} & \SI{42,6}{\percent} & \SI{45,0}{\percent} & \SI{43,8}{\percent} & \SI{40,9}{\percent}\\
+\textbf{Classe D40} & \SI{70,2}{\percent} & \SI{84,6}{\percent} & \SI{76,7}{\percent} & \SI{84,3}{\percent}\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\end{frame}
+
+\begin{frame}{Estudo de Caso: Resultados}
+\begin{figure}[h!]
+	\centering
+	\hfill \subfloat[Exemplo 1 -- Desejado]{\includegraphics[width=0.45\linewidth]{./img/pothole_6.jpg}} 	\hfill
+	\subfloat[Exemplo 1 -- Previsto]{\includegraphics[width=0.45\linewidth]{./img/detected_6.jpg}} \hfill
+    \caption{Exemplos de previsão do modelo no cenário brasileiro.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Estudo de Caso: Resultados}
+\begin{figure}[h!]
+	\centering
+	\hfill\subfloat[Exemplo 2 -- Desejado]
+	{\includegraphics[width=0.45\linewidth]{./img/pothole_5.jpg}}\hfill
+	\subfloat[Exemplo 2 -- Previsto]
+	{\includegraphics[width=0.45\linewidth]{./img/detected_5.jpg}}\hfill
+	\caption{Exemplos de previsão do modelo no cenário brasileiro.}
+	
+\end{figure}
+\end{frame}
+
+\begin{frame}{Estudo de Caso: Análise dos Resultados}
+\begin{itemize}
+    \item Transferência Negativa de Aprendizado: decréscimo percentual do mAP@0.5 de $\SI{14,25}{\percent}$
+    \ \ \newline
+    \item Tamanho das \emph{bounding boxes}, resolução das imagens, distância entre domínio de origem e de aplicação, etc.
+    \ \ \newline
+    \item Necessidade de elaborar bases de dados representativas para o Brasil
+\end{itemize}
+
+\end{frame}

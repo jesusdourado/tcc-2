@@ -1,0 +1,45 @@
+%!TEX root=../main.tex
+
+\begin{frame}{Fundamentação Teórica}
+\begin{itemize}
+    \item \alert{Rede Neural Artificial (RNA)}: composta por neurônios conectados numa rede que realizando cálculos sobre entradas e emitindo saídas
+    %\ \ \newline
+    \item \alert{Rede Neural Convolucional (CNN)}: utilizam filtros convolucionais que trabalham com entradas multidimensionais
+    %\ \ \newline
+    \item  \alert{Rede Neural Convolucional Regional (R-CNN)}: voltadas para detecção de objetos
+    \begin{itemize}
+        \item Janelamento
+        \item \emph{Selective Search}
+        \item Outras CNNs
+    \end{itemize}
+    \item CNNs e R-CNNs estão em constante evolução
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamentação Teórica: YOLO}
+\begin{itemize}
+    \item \alert{You Only Look Once}: abordagem \emph{single-shot} \cite{Redmon:YOLOoriginal}
+    \ \ \newline
+    \item O modelo mostrou-se mais rápido e eficiente que os vigentes até agora
+    \ \ \newline
+    \item Aplicações em tempo real, até 120 FPS
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamentação Teórica: YOLO}
+
+\begin{block}{YOLOv5 \cite{Yolov5}}
+\begin{itemize}
+    \item Melhora na acurácia, velocidade de treinamento e de inferência, além de uma redução na quantidade de pesos
+    \item Desenvolvida nativamente com \emph{framework Pytorch}, visando maior suporte e processo de \emph{deploy} simplificado 
+\end{itemize}
+
+\end{block}
+\begin{block}{YOLOv7 \cite{yolov7}}
+\begin{itemize}
+    \item Aprimoramento dos modelos ao incorporar um processo de reparametrização
+    \item Estratégia de dimensionamento em escala para outras quantidades de parâmetros
+\end{itemize}
+\end{block}
+
+\end{frame}

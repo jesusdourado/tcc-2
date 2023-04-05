@@ -1,0 +1,22 @@
+%!TEX root=../main.tex
+\begin{frame}{Considerações Finais}
+    \begin{itemize}
+          \item A solução baseada em YOLO e desenvolvida neste trabalho é um modelo satisfatório para a tarefa de detecção de protozoários responsáveis pela malária
+          \ \ \newline
+          \item Identificação de configuração da YOLOv7 com melhor desempenho
+          \begin{itemize}
+              \item \emph{Large} para $500$ épocas
+              \item \mbox{$\textrm{mAP@0.5} = \SI{81,4}{\percent}$} 
+          \end{itemize}
+          \ \ \newline
+          \item As entradas para o modelo foram imagens microscópicas originais, sem processamento prévio das mesmas
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Considerações Finais: Próximos Passos}
+     \begin{itemize}
+            \item Melhorar o desempenho da solução, buscando explorar também as novas arquiteturas, suas configurações e ajuste fino de parâmetros
+            \ \ \newline
+            \item As imagens poderão ser divididas e as caixas delimitadoras alteradas, focando melhorar o desempenho dos treinos e testes com as novas versões.
+        \end{itemize}
+\end{frame}

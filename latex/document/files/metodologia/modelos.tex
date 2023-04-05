@@ -1,0 +1,23 @@
+%!TEX root=../../sbc-template.tex
+
+No escopo deste trabalho foram considerados R-CNNs da Família YOLO dos modelos YOLOv5 \cite{Jocher:YOLOv5} e YOLOv7 \cite{yolov7}, considerando as versões dispostas na Tabela \ref{tab:modelosExperimentos}.
+
+\begin{table}[h!]
+\caption{Modelos da Família YOLO considerados e suas características.} \label{tab:modelosExperimentos}
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+\textbf{Modelo} & \textbf{Versão} & \textbf{Camadas} & \textbf{Parâmetros (Mi)}\\
+\midrule
+\textbf{YOLOv5} & \emph{Nano} & $\num{10}$ & $\num{1.7}$\\
+\textbf{YOLOv5} & \emph{Small} & $\num{20}$ & $\num{7}$\\
+\textbf{YOLOv5} & \emph{Medium} & $\num{29}$ & $\num{20.8}$\\
+\textbf{YOLOv7} & \emph{Tiny} & -  & $\num{6}$\\
+\textbf{YOLOv7} & \emph{Normal} & -  & $\num{36.4}$\\
+\textbf{YOLOv7} & \emph{X} & -  & $\num{70.7}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Como o número de parâmetros na YOLOv7 em todas as suas versões é substancialmente superior ao número relacionado de parâmetros na YOLOv5, foi necessário levar em consideração o ônus computacional de tempo e memória para o planejamento dos experimentos. No caso das YOLOv5, optou-se por utilizar $300$ ou $500$ épocas e \emph{batches} de tamanho $16$. Para as YOLOv7, considerou-se apenas $500$ épocas, pois supõe-se que mais parâmetros requeiram uma maior quantidade de ajustes. Nas versões \emph{Tiny} e \emph{Normal} utilizou-se \emph{batches} de tamanho $8$, mas para a versão $\emph{X}$ apenas foi viável utilizar \emph{batches} de tamanho $4$. Em todos os casos, considerou-se a regularização com \emph{Early Stopping} e paciência igual a $100$, pesos pré-treinados e demais hiperparâmetros com valores padrão.

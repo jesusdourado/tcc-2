@@ -1,0 +1,6 @@
+\select@language {brazil}
+\beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{2}{0}{1}
+\beamer@sectionintoc {2}{Metodologia}{7}{0}{2}
+\beamer@sectionintoc {3}{Resultados}{11}{0}{3}
+\beamer@sectionintoc {4}{Considera\IeC {\c c}\IeC {\~o}es Finais}{14}{0}{4}
+\beamer@sectionintoc {5}{Agradecimentos}{16}{0}{5}

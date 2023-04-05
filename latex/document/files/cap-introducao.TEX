@@ -1,0 +1,57 @@
+\chapter{Introdução}
+
+A malária é uma doença causada pelo protozoário do gênero \emph{Plasmodium} e transmitida pela fêmea do mosquito do gênero \emph{Anopheles}. No Brasil, existem três espécies do \emph{Plasmodium} que transmitem malária para seres humanos: \emph{P.\@ vivax}, \emph{P.\@ malariae} e \emph{P.\@ falciparum}, sendo esta última considerada a mais grave por causar alterações estruturais nos glóbulos vermelhos \cite{Gomes:2011,Loiola:2002}.
+
+Quanto à enfermidade, de acordo com a Fundação Oswaldo Cruz (FIOCRUZ), trata-se de uma doença infecciosa.  Em um paciente portador do protozoário, o seu estado clínico é variável a partir do início da infecção, mas listam-se os seguintes sintomas como os mais comuns: febre alta e intermitente, dores musculares, cefaleia e delírios. Quando o tratamento é negligenciado, a doença pode se agravar e manifestar sintomas mais severos, tais como desorientação, convulsões, vômitos, sonolência ou excitação e, eventualmente, levar o paciente a óbito \cite{FIOCRUZ:Site}.
+
+A malária ainda é considerada um problema grave de saúde no mundo, sendo uma das principais doenças letais em regiões tropicais e subtropicais ao redor do globo. De acordo com o Relatório Mundial de Malária de 2019 produzido pela Organização Mundial de Saúde (OMS), foram registrados 228 milhões de casos e 405 mil mortes em âmbito global, em que a grande maioria ocorreu na África \cite{OMS:Malaria2019}.
+
+No Brasil, a malária é uma doença de notificação compulsória e, portanto, todos os casos suspeitos ou confirmados devem ser, obrigatoriamente, notificados às autoridades de saúde \cite{Brasil:DecretoMalaria}. A série histórica dos casos de malária no Brasil foi iniciada em 1959 e até o o ano de 2005 possuía forte tendência crescente, vindo a diminuir significativamente até o ano de 2013 \cite{Boletim:2013}. Entre os anos de 2017 a 2019 há uma queda percentual de $\SI{19,3}{\percent}$ no número de casos, mas há suspeita de subnotificação levantada pelas autoridades de saúde \cite{Boletim:Malaria2020}. Mais recentemente, os anos de 2020 e 2021 registraram 141 mil e 135 mil casos, respectivamente \cite{Boletim:Malaria2022}. Ressalta-se que, em todo o período observado, a maioria dos casos da doença ocorreu na região Amazônica (Acre, Amapá, Amazonas, Maranhão, Mato Grosso, Pará, Rondônia, Roraima e Tocantins), área endêmica para a doença \cite{Brasil:SINAN}.
+
+O diagnóstico da malária é feito atualmente por meio da análise microscópica de lâminas contendo amostra de sangue coletadas pelo método da gota espessa ou ainda por testes rápidos de diagnóstico (RDTs, do inglês \emph{Rapid diagnostic tests}) \cite{OMS:Malaria2019}. Segundo um estudo recente, os RDTs possuem uma variação de desempenho de detecção da doença a depender da localização geográfica considerada e da idade do paciente, o que ressalta sua limitação. Apesar disso, os autores recomendam-os para uso em áreas remotas e reforçam a análise microscópica como técnica de referência para o diagnóstico \cite{Berzosa:MalariaDiagnostico}. A análise de amostras sanguíneas para detecção de malária requer não apenas equipamentos de boa qualidade, mas também habilidade em microscopia, o que é dificultada pela má disposição de treinamento para os profissionais da área, o que enseja diagnósticos incorretos \cite{Paz:Habilidade}.
+
+Uma estratégia para contornar as dificuldades enfrentadas para o diagnóstico da malária é considerar o papel relevante das soluções computacionais baseadas em métodos e técnicas de \emph{Deep Learning} para problemas de Visão Computacional na área de Saúde, tais como em Imagiologia Médica e  Microscopia \cite{Shen:SurveyMedico,Lee:SurveyMedico,Xing:SurveyMedico}. Essa sub-área emergente da Inteligência Artificial baseia-se principalmente no uso de Redes Neurais Convolucionais Profundas (CNNs, do inglês \emph{Convolutional Neural Networks} para extração sucessiva de características hierárquicas em dados de alta dimensionalidade \cite{Goodfellow:Livro}, permitindo aplicações de classificação, detecção e segmentação em imagens mediante Aprendizado Supervisado a partir de conjuntos massivos de dados \cite{Chollet:2017,Khan:2018}.
+
+É intuitivo, assim, conjecturar acerca do potencial de aplicação de métodos de \emph{Deep Learning} em imagens microscópicas para colaborar no diagnóstico de malária. Esta questão já foi explorada em outros trabalhos da literatura, os quais consideraram a tarefa de classificação binária quanto à presença ou ausência do protozoário em uma dada célula sanguínea, previamente segmentada manualmente ou conforme algum método de Visão Computacional tradicional \cite{Felipe:2022,Yang:2020}. Embora os resultados obtidos por estes autores denotem bom desempenho das CNNs nesta tarefa, dependem crucialmente de uma etapa de pré-processamento para isolamento das múltiplas células contidas em uma imagem microscópica.
+
+Considerando as limitações observadas na literatura, este trabalho de conclusão visou investigar a viabilidade no uso de métodos de \emph{Deep Learning} para detecção de protozoários causadores de malária em uma dada imagem microscópica fornecida como entrada. A vantagem de uma solução desta natureza é a delimitação e localização de cada parasita na imagem, permitindo a posterior supervisão por um especialista humano; favorecendo a contagem dos protozoários, o que é crucial para determinar a estratégia de tratamento; e colaborando para mitigar os erros de diagnóstico em face das habilidades requeridas pelos microscopistas humanos nesta tarefa.
+
+\section{Objetivos}
+
+O objetivo geral deste trabalho consistiu em avaliar modelos de \emph{Deep Learning} para detecção de malária em imagens microscópicas. Para alcançar este objetivo, foi necessário contemplar as seguintes metas:
+
+\begin{enumerate}
+    \item Identificar e preparar uma base de dados da literatura no domínio da detecção de malária;
+    \item Elaborar e conduzir um estudo de caso experimental para treinamento e avaliação comparativa das arquiteturas de CNNs para detecção de objetos;
+    \item Avaliar e analisar os resultados obtidos de maneira qualitativa e quantitativa.
+\end{enumerate}
+
+\section{Justificativa}
+
+Mesmo tendo sido descoberta no final do Século XIX, a malária ainda é uma doença endêmica em todo o mundo, com um grande quantitativo de casos e óbitos, em que a principal justificativa para a perda de vidas é o diagnóstico tardio combinado com a falta de acesso aos recursos para tratamento \cite{OMS:Malaria2019}. No Brasil, embora o tratamento seja gratuito,  mais de $\SI{70}{\percent}$ dos casos ocorreram em áreas rurais ou regiões indígenas \cite{Boletim:Malaria2022}, o que se mostra um desafio em um país de dimensões continentais. Em todo o caso, o diagnóstico de referência da malária é feito via análise microscópica, o que depende de profissionais altamente especializados \cite{Paz:Habilidade}.
+
+Colaborar para o desenvolvimento de métodos automáticos e inteligentes para o diagnóstico de malária pode mitigar o fardo dessa doença, antecipando o diagnóstico e, consequentemente, o tratamento. Isto pode ser especialmente crucial para as populações mais vulneráveis e aquelas que residem em regiões remotas, em que não há disponibilidade de serviços de saúde e tampouco infraestrutura de alta qualidade para microscopia. Ademais, é possível também ampliar a quantidade de testes realizados, permitindo um melhor monitoramento de populações residentes em áreas endêmicas. Ressalta-se, entretanto, que no escopo deste trabalho de conclusão de curso não haverá coleta de dados diretamente com sujeitos e que tampouco os modelos propostos e avaliados  serão utilizados ou testados em cenários reais. Se viáveis, estes passos podem ocorrer em momentos posteriores no contexto da proposição de outros projetos de pesquisa e com a devida supervisão de Comitê de Ética.
+
+Por fim, deve-se mencionar a importância da realização deste trabalho com vistas a colaborar com as atividades desenvolvidas pelo LSI, uma iniciativa do Grupo de Pesquisas em Sistemas Inteligentes da Escola Superior de Tecnologia (EST) da UEA.
+
+\section{Metodologia}
+
+A metodologia utilizada para o desenvolvimento das atividades presentes neste trabalho, com o intuito de atingir os objetivos especificados, é descrita a seguir:
+
+\begin{enumerate}
+    \item Estudo dos conceitos relativos às CNNs perante tarefas de detecção (R-CNNs);
+    \item Levantamento do ferramental tecnológico para implementação das R-CNNs;
+    \item Identificação e análise exploratória de uma base de dados disponível na literatura voltada para a tarefa de Visão Computacional de detecção de malária;
+    \item Identificação de arquiteturas de R-CNNs do estado da arte para problemas de detecção, especialmente da Família YOLO;
+    \item Conceber um cenário experimental para avaliação dos modelos de R-CNNs para detecção de malária;
+    \item Treinamento dos modelos;
+    \item Aferição das métricas de desempenho no teste dos modelos;
+    \item Escrita da proposta de Trabalho de Conclusão de Curso;
+    \item Defesa da proposta de Trabalho de Conclusão de Curso;
+    \item Escrita do Trabalho de Conclusão de Curso;
+    \item Defesa do Trabalho de Conclusão de Curso.
+ \end{enumerate}
+
+\section{Organização do Documento}
+
+Este documento está organizado como segue: os fundamentos teóricos que embasam o trabalho, incluindo conceitos de \emph{Deep Learning} com CNNs e sua aplicação na detecção de objetos encontram-se dispostos no Capítulo \ref{cap:fundamentacao}, incluindo também uma apresentação de contribuições relacionadas ao problema já existentes na literatura. Os materiais e métodos adotados para a solução proposta encontram-se discriminados no Capítulo \ref{cap:metodologia}. Os resultados obtidos são apresentados e discutidos no Capítulo \ref{cap:resultados}. Por fim, as considerações finais podem ser consultadas no Capítulo \ref{cap:considera}.
